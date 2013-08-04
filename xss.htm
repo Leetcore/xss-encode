@@ -1,0 +1,39 @@
+<html>
+<body>
+  <form name="xss" action="">
+		<b>XSS Input:</b>
+		<ul>
+			<textarea name="ascii" cols=80 rows=4>XSS Code hier her!</textarea>
+			<br><input type="button" value="Encode" onclick="encode()">
+			<input type="reset" value="Reset">
+		</ul>
+			
+		<b>Hex Value:</b>
+		<ul> 
+			<li>
+				URL:<br>
+				<input type="text" name="hex" size="60">
+				<br><input type="button" value="Decode Hex to ASCII" onclick="decode()" size="50">
+			</li>
+			HTML (mit Semicolons):<br>
+			<input type="text" name="hexhtml" size="60">
+			<br><input type="button" value="Decode Hex Entities to ASCII" onclick="convertHexToASCII()" size="50"><br>
+		</ul>
+
+		<b>Decimal Value:</b>
+		<ul>
+			HTML (without semicolons):<br>
+			<input type="text" name="unicode" size="60"><br>
+			<input type="button" value="Decode Dec to ASCII" onclick="convertToASCII()">
+		</ul>
+
+		<b>Base64 Value</b>
+		<ul> 
+			Base64:<br>
+			<input type="text" name="base64" size="60"><br>
+			<input type="button" value="Decode Base64" onclick="document.xss.ascii.value=decodeBase64(document.xss.base64.value);">
+		</ul>
+	</form>
+	<script src="xss.js"></script>
+</body>
+</html>
