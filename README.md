@@ -1,4 +1,4 @@
 xss-encode
 ==========
 
-Simple Javascript that encodes your XSS for you.
+HEX, DEC, Base64 Converter für Cross Site Scripting (XSS).
