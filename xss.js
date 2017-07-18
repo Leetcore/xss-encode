@@ -79,7 +79,6 @@ function convertHexToASCII() {
 			sub = testText[i].substring(testText[i].length-3,testText[i].length-1) 
 			if  (sub.length < 2) {
 				resultString += "%0" + sub;
-				alert ("You probably typo'd ", sub, " - ", resultString);
 			} else {
 				resultString += "%" + sub;
 			}
